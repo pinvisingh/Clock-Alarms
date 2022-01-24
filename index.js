@@ -29,6 +29,8 @@
 //                 document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec + ' ' + en ; 
 //             }
 
+
+// create a all variable here
 const currentTime = document.querySelector("#current-time");
 const setHours = document.querySelector("#hours");
 const setMinutes = document.querySelector("#minutes");
