@@ -1,13 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
   }
-  
-  body {
-    /* font-family: sans-serif; */
-  }
-  
+
   .d-flex {
     display: flex;
   }
@@ -35,7 +29,7 @@
     border-color: rgb(231, 181, 181);
   }
   
-  .mb {
+  .curr {
     margin-bottom: 1rem;
   }
   
@@ -121,15 +115,15 @@
   }
 
   
-  /* style of devices of screen size less than 768px */
+  /* create the screen size less than 768px */
   @media only screen and (min-width: 600px) {
-    /* adding padding to container */
+    /* adding padding to block container */
     .main-container {
-      padding-block: 2rem;
+      padding-block: 4rem;
     }
     .clock-container{
         justify-content: center;
-        border-radius: 50px;
+        border-radius: 100px;
         width: 450px;
         min-height: auto;
     }
