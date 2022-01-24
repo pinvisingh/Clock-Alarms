@@ -8,13 +8,10 @@
     
     <title>Alarm Clock</title>
 
-    <!--Favicon-->
-
-    <!-- <link rel = "icon" href="https://library.kissclipart.com/20191014/aie/kissclipart-clock-icon-management-icon-time-icon-474c4db05c8d3baf.png" /> -->
+    <!-- HERE LINK A FAVICON SHOW WITH TITLE BOX -->
     <link rel = "icon" href="favicon.png" />
 
-    <!-- Stylesheet-->
-
+    <!--HERE LINK A CSS PAGE -->
     <link rel = "stylesheet" href = "style.css" />
 
 </head>
@@ -22,15 +19,15 @@
 <body>
     <div class="main-container d-flex">
       <div class="clock-container d-flex">
-        <div class="current-time mb" id= "current-time">_ : _ : _ </div>
-        <form class="alarm-form d-flex mb">
+        <div class="current-time curr" id= "current-time"> </div>
+        <form class="alarm-form d-flex curr">
           <div>
           <select name="hours" id="hours" required></select>
 
-          <select required name="minutes" id="minutes"></select>
+          <select  name="minutes" id="minutes" required></select>
 
-          <select required name="seconds" id="seconds"></select>
-          <select required name="am-pm" id="am-pm">
+          <select  name="seconds" id="seconds" required></select>
+          <select  name="am-pm" id="am-pm" required>
             <option value="AM">AM</option>
             <option value="PM">PM</option>
           </select>
@@ -38,13 +35,13 @@
           <button class="btn submit-button" id="submitButton" type="submit">Set Alarm</button>
         </form>
         <div class="set-alarm-container">
-          <div class="set-alarm-container-title mb">Alarms</div>
+          <div class="set-alarm-container-title curr">Alarms</div>
           <div class="alarms-container" id= "alarms-container"></div>
         </div>
       </div>
     </div>
 
-    <!-- JavaScript File -->
+    <!--link a JavaScript File -->
     <script src="index.js"></script>
   </body>
 </html>
