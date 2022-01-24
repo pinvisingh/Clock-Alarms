@@ -101,7 +101,7 @@
     font-size: 1rem;
     font-weight: bold;
   }
-  .btn:focus,
+
   .btn:hover {
     box-shadow: red 2px 2px 2px 1px inset, #fff -2px -2px 10px 1px inset;
   }
