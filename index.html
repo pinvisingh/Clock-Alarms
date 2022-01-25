@@ -17,23 +17,33 @@
 </head>
 
 <body>
+<!--MAIN DIV CONTAIN A SYSTEM DISPLAY SIZE -->
     <div class="main-container d-flex">
+      <!-- THIS DIV CONTAIN A CURRENT TIME AND ALL ALARM + SET ALARM BY USER        -->
       <div class="clock-container d-flex">
+        <!-- THIS DIV SHOW A CURRENT TIME OF  SYSTEM -->
         <div class="current-time curr" id= "current-time"> </div>
+        <!-- HERE CREATE A FORM FOR HAVING CHANGE A ALARM TIME BY USER AND SET A ALARM -->
         <form class="alarm-form d-flex curr">
+          <!--HERE THIS DIV ALL CONTAIN A HOURS ,MINUTES ,SECONDS,AM/PM SAME AS INLINE ELEMENT -->
           <div>
-          <select name="hours" id="hours" required></select>
+            <select name="hours" id="hours" required></select>
 
-          <select  name="minutes" id="minutes" required></select>
+            <select  name="minutes" id="minutes" required></select>
 
-          <select  name="seconds" id="seconds" required></select>
-          <select  name="am-pm" id="am-pm" required>
+            <select  name="seconds" id="seconds" required></select>
+              
+            <select  name="am-pm" id="am-pm" required>
+                
             <option value="AM">AM</option>
+                
             <option value="PM">PM</option>
           </select>
           </div>
+          <!-- HERE SHOW A BUTTON OF SET ALARMS  -->
           <button class="btn submit-button" id="submitButton" type="submit">Set Alarm</button>
         </form>
+        <!-- THIS DIV CONTAIN A ALARM LIST AND SAVE ALARM AND CHOOSE A OPTION FOR SELETE THE ALARM INSIDE A LIST  -->
         <div class="set-alarm-container">
           <div class="set-alarm-container-title curr">Alarms</div>
           <div class="alarms-container" id= "alarms-container"></div>
