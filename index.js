@@ -29,8 +29,6 @@
 //                 document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec + ' ' + en ; 
 //             }
 
-
-// create a all variable here
 const currentTime = document.querySelector("#current-time");
 const setHours = document.querySelector("#hours");
 const setMinutes = document.querySelector("#minutes");
@@ -59,7 +57,7 @@ setAlarmButton.addEventListener("click", getInput);
 // document.forms[0].reset();
 
 
-
+// DROPDOWN MENU WORKING LOGIC AND IF USER CHOOSE A SINGLE DIGIT TIME THEN SHOW INFRONT OF "0"
 function dropDownMenu(start, end, element) {
   for (let i = start; i <= end; i++) {
     const dropDown = document.createElement("option");
@@ -85,6 +83,7 @@ function getCurrentTime() {
 
 
 function getInput(e) {
+  // HERE PREVENT DEFAULT USING FOR PGE IS NOT REFRESH
   e.preventDefault();
   const hourValue = setHours.value;
   const minuteValue = setMinutes.value;
@@ -105,7 +104,7 @@ function convertToTime(hour, minute, second, amPm) {
   return `${parseInt(hour)}:${minute}:${second} ${amPm}`;
 }
 
-
+// set alarm
 function setAlarm(time, fetching = false) {
   const alarm = setInterval(() => {
     if (time === getCurrentTime()) {
@@ -120,10 +119,10 @@ function setAlarm(time, fetching = false) {
   }
 }
 
-// Alarms set by user Dislayed in HTML
+// Alarms set by user Dislayed in index.html page
 function addAlaramToDom(time, intervalId) {
   const alarm = document.createElement("div");
-  alarm.classList.add("alarm", "mb", "d-flex");
+  alarm.classList.add("alarm", "curr", "d-flex");
   alarm.innerHTML = `
               <div class="time">${time}</div>
               <button class="btn delete-alarm" data-id=${intervalId}>Delete</button>
@@ -160,7 +159,7 @@ function fetchAlarm() {
   });
 }
 
-
+// delete the save alarms
 function deleteAlarm(event, time, intervalId) {
   const self = event.target;
 
